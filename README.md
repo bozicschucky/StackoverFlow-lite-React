@@ -3,6 +3,8 @@ StackOverFlow-Lite App is an application that provides users with the ability to
 
 ## Build Status
 [![Build Status](https://travis-ci.com/bozicschucky/StackoverFlow-lite-React.svg?branch=develop)](https://travis-ci.com/bozicschucky/StackoverFlow-lite-React)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f735a4434c3913763ad8/maintainability)](https://codeclimate.com/github/bozicschucky/StackoverFlow-lite-React/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f735a4434c3913763ad8/test_coverage)](https://codeclimate.com/github/bozicschucky/StackoverFlow-lite-React/test_coverage)
 
 # Getting Started
 
