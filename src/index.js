@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-import "./style.scss";
+import "./styles/style.scss";
 import App from "./components/App";
 
 	ReactDOM.render(
