@@ -21,7 +21,7 @@ addons:
   code_climate
 env:
   global:
-    - CC_TEST_REPORTER_ID=771376ccd983452d76ec79757a8b618ac040da1c3e1ef64de70d840722a11174
+    - CC_TEST_REPORTER_ID=a32678d19c4ad90f5ee89f9b144f4fc008b817cca8669e4350ddb17b1c88316e
 install:
   - yarn
 before_script:
