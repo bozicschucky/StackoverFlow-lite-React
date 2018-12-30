@@ -1,9 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import {BrowserRouter, Route,Switch } from 'react-router-dom';
-
-import { appAction } from "../actions/appAction";
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./header";
+import Signup from './usersignup/signup';
 
 export const home = () => {
 	return (
@@ -11,25 +10,20 @@ export const home = () => {
 			<p>Welcome to the home component</p>
 		</div>
 	);
-}
-
-
-export const notFound = () => {
-	return (
-		<div>
-			<p>The page is not Found 404</p>
-		</div>
-	);
-}
+};
 
 const App = () => {
-	return(
-	<BrowserRouter>
-	<Switch>
-		<Route path="/" component={home} exact/>
-		<Route component={notFound} />
-	</Switch>
-	</BrowserRouter>);
-	}
+	return (
+		<BrowserRouter>
+			<div>
+				<Header />
+				<Switch>
+					<Route path="/" component={home} exact />
+					<Route path="/register" component={Signup} />
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
+};
 
 export default App;
