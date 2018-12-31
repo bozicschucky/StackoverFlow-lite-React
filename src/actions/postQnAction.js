@@ -9,7 +9,7 @@ const token = localStorage.getItem("userToken");
 const POSTQN_URL =
 "https://stackoverflowlite2.herokuapp.com/api/v2/questions";
 
-const postQnAction = data => dispatch =>
+	const postQnAction = data => dispatch =>
 	fetch(POSTQN_URL, {
 		method: "post",
 		body: JSON.stringify(data),
