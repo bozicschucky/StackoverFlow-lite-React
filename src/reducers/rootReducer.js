@@ -2,8 +2,10 @@
 import { combineReducers } from "redux";
 import signUpReducer from './signUpReducer';
 import loginReducer from './loginReducer';
+import postQnReducer from './postQnReducer';
 
 export default combineReducers({
 	signUpReducer,
-	loginReducer
+	loginReducer,
+	postQnReducer
 });
