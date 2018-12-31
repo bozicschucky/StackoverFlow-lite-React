@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-
 export default () => {
 	return (
 		<div >
@@ -9,6 +8,8 @@ export default () => {
 			<NavLink to={"/register"}>Register</NavLink>
 			<NavLink to={"/login"}>Login</NavLink>
 			<NavLink to={"/post"}>Post</NavLink>
+			<NavLink to={"/all"}>Qtns</NavLink>
+			<NavLink to={"/myqtns"}>MyQtns</NavLink>
 		</ul>
 		</div>
 	)
