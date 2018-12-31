@@ -8,6 +8,7 @@ export default () => {
 			<NavLink to={"/"}>MiniOverFlow</NavLink>
 			<NavLink to={"/register"}>Register</NavLink>
 			<NavLink to={"/login"}>Login</NavLink>
+			<NavLink to={"/post"}>Post</NavLink>
 		</ul>
 		</div>
 	)
