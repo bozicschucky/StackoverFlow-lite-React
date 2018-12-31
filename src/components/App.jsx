@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./header";
 import Signup from './usersignup/signup';
+import Login from './userlogin/login';
 
 export const home = () => {
 	return (
@@ -20,6 +21,7 @@ const App = () => {
 				<Switch>
 					<Route path="/" component={home} exact />
 					<Route path="/register" component={Signup} />
+					<Route path="/login" component={Login} />
 				</Switch>
 			</div>
 		</BrowserRouter>
