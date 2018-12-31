@@ -7,6 +7,7 @@ export default () => {
 		<ul className="nav-bar">
 			<NavLink to={"/"}>MiniOverFlow</NavLink>
 			<NavLink to={"/register"}>Register</NavLink>
+			<NavLink to={"/login"}>Login</NavLink>
 		</ul>
 		</div>
 	)

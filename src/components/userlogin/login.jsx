@@ -1,19 +1,14 @@
 import React, { Component } from "react";
-import toastr from "toastr";
 import { connect } from "react-redux";
-import SignUpAction from "../../actions/signupAction";
+import loginAction from "../../actions/loginAction";
 import {Link} from 'react-router-dom';
 
-toastr.options = {
-	positionClass: "toast-top-center",
-	preventDuplicates: true
-};
 
-export class SignUp extends Component {
+
+export class Login extends Component {
 	state = {
 		username: "",
-		password: "",
-		confirmPassword: ""
+		password: ""
 	};
 
 	onChange = e => {
@@ -22,18 +17,14 @@ export class SignUp extends Component {
 
 	onFormSubmit = e => {
 		e.preventDefault();
-		if (this.state.password === this.state.confirmPassword) {
-			this.props.SignUpAction(this.state);
-		} else {
-			toastr.warning("passwords don't macth try again");
-		}
+			this.props.loginAction(this.state);
 	};
 	render() {
 		return (
 			<div>
 				<main id="main_field" onSubmit={this.onFormSubmit}>
 					<form method="post" className="main-form" id="signup-form">
-						<h1 className="form-head">Create Account</h1>
+						<h1 className="form-head">Login</h1>
 						<label htmlFor="username">Username</label>
 						<input
 							type="text"
@@ -53,20 +44,10 @@ export class SignUp extends Component {
 							maxLength="20"
 							onChange={this.onChange}
 						/>
-						<label htmlFor="confirmPassword">Confirm Password</label>
-						<input
-							type="password"
-							name="confirmPassword"
-							id="confirmPassword"
-							required
-							minLength="6"
-							maxLength="20"
-							onChange={this.onChange}
-						/>
 						<p>
-							Already have an account?<Link to="/login">Login</Link>
+						Don't have an account?<Link to="/register"> register</Link>
 						</p>
-						<input className="btn" type="submit" value="signup" />
+						<input className="btn" type="submit" value="Login" />
 					</form>
 				</main>
 			</div>
@@ -75,14 +56,14 @@ export class SignUp extends Component {
 }
 
 const mapStateToProps = state => ({
-	value: state.signUpReducer.value
+	value: state.loginReducer.value
 });
 
 const mapDispatchToProps = dispatch => {
-	return { SignUpAction: data => dispatch(SignUpAction(data)) };
+	return { loginAction: data => dispatch(loginAction(data)) };
 };
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(SignUp);
+)(Login);
