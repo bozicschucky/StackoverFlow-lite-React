@@ -1,4 +1,4 @@
-import { LOGIN } from "./types";
+import { POST_QN } from "./types";
 import toastr from "toastr";
 toastr.options = {
 	positionClass: "toast-top-center",
@@ -21,7 +21,7 @@ const postQnAction = data => dispatch =>
 		.then(res => res.json())
 		.then(res => {
 			dispatch({
-				type: LOGIN,
+				type: POST_QN,
 				payload: res
 			});
 			toastr.success(res.message);
