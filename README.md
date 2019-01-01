@@ -37,7 +37,7 @@ You can clone the project and test it locally by cloning the link below
 # Developed using
  - React
  - Redux
- - Axios (For making requests to the api)
+ - Fetch (For making requests to the api)
 
 
 # Authors
