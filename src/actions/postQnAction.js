@@ -25,6 +25,9 @@ const POSTQN_URL =
 				payload: res
 			});
 			toastr.success(res.message);
+			setTimeout(() => {
+				window.location.replace("/myqtns");
+			}, 4000);
 		});
 
 export default postQnAction;

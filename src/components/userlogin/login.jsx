@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import loginAction from "../../actions/loginAction";
-import {Link} from 'react-router-dom';
-
-
+import { Link } from "react-router-dom";
+import { browserHistory } from "react-router";
 
 export class Login extends Component {
 	state = {
@@ -17,7 +16,7 @@ export class Login extends Component {
 
 	onFormSubmit = e => {
 		e.preventDefault();
-			this.props.loginAction(this.state);
+		this.props.loginAction(this.state);
 	};
 	render() {
 		return (
@@ -45,7 +44,7 @@ export class Login extends Component {
 							onChange={this.onChange}
 						/>
 						<p>
-						Don't have an account?<Link to="/register"> register</Link>
+							Don't have an account?<Link to="/"> register</Link>
 						</p>
 						<input className="btn" type="submit" value="Login" />
 					</form>

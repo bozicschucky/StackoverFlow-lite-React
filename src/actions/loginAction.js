@@ -23,7 +23,10 @@ const LoginAction = data => dispatch =>
 				payload: res
 			});
 			toastr.warning(res.message);
-			localStorage.setItem("userToken",res.access_token);
+			localStorage.setItem("userToken", res.access_token);
+			setTimeout(() => {
+				window.location.replace("/all");
+			}, 4000);
 		});
 
 export default LoginAction;
