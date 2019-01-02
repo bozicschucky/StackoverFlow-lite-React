@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import loginAction from "../../actions/loginAction";
 import { Link } from "react-router-dom";
-import { browserHistory } from "react-router";
 
 export class Login extends Component {
 	state = {
@@ -54,11 +53,11 @@ export class Login extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
 	value: state.loginReducer.value
 });
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
 	return { loginAction: data => dispatch(loginAction(data)) };
 };
 

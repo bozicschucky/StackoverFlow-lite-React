@@ -74,11 +74,11 @@ export class SignUp extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
 	value: state.signUpReducer.value
 });
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
 	return { SignUpAction: data => dispatch(SignUpAction(data)) };
 };
 

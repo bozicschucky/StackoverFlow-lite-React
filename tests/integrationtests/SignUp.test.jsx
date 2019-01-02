@@ -1,15 +1,8 @@
 import React from "react";
-import thunk from "redux-thunk";
-import { mount, shallow } from "enzyme";
-import { Provider } from "react-redux";
-import configureMockStore from "redux-mock-store";
-import { BrowserRouter as Router } from "react-router-dom";
+import { shallow } from "enzyme";
 
-import SignUp from "../../src/components/usersignup/signup";
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
-const store = mockStore({ values: [] });
+import {SignUp, mapStateToProps} from "../../src/components/usersignup/signup";
 
 describe("<SignUP/>", () => {
 	it("mounts the sign component", () => {
@@ -17,12 +10,24 @@ describe("<SignUP/>", () => {
 			SignUpAction: () => jest.fn(),
 			value:{value:['some']}
 		};
-		const wrapper = shallow(
-			<Provider store={store}>
-				<Router>
-					<SignUp SignUpAction={props.SignUpAction} />
-				</Router>
-			</Provider>
-		);
+		const wrapper = shallow(<SignUp {...props}/>);
+		const instance = wrapper.instance();
+		let e = {target:{name:"just", value:"user"}};
+		instance.onChange(e);
+		let value = {preventDefault:jest.fn()}
+		instance.onFormSubmit(value)
+		instance.setState({password:"chucky",confirmPassword:"dude"})
+		instance.onFormSubmit(value)
+
 	});
+});
+
+
+describe('Checks wether mapStatetoProps returns', () => {
+	const expectedProp = {
+    signUpReducer: {
+      item: { message: "user already registered" },
+    }
+	};
+	expect(mapStateToProps(expectedProp)).toBeTruthy();
 });

@@ -49,11 +49,11 @@ export class PostQn extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
 	value: state.postQnReducer.value
 });
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
 	return { postQnAction: data => dispatch(postQnAction(data)) };
 };
 
