@@ -9,10 +9,10 @@ StackOverFlow-Lite App is an application that provides users with the ability to
 # Getting Started
 
 You can clone the project and test it locally by cloning the link below
-<!-- The link is [StackOverFlow-Lite](https://github.com/bozicschucky/Frontend-Challenge-4-Fetch-api-) -->
+The link is [StackOverFlow-Lite](https://github.com/bozicschucky/StackoverFlow-lite-React.git)
 
 # Project Link
- <!-- Visit the hosted verion [StackOverFlow-Lite](https://stackoverflowlite1ui.herokuapp.com/home.html) -->
+ Visit the depolyed verion [StackOverFlow-Lite](https://stack-overflow-lite-reactapp.herokuapp.com)
 
 # Usage
  - User first has to create an account.
