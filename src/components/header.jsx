@@ -1,15 +1,21 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 export default () => {
+	const token = localStorage.getItem("userToken")
 	return (
 		<div >
 		<ul className="nav-bar">
+			{(token)?(
+				<div>
+				<NavLink to={"/post"}>Post</NavLink>
+				<NavLink to={"/all"}>Qtns</NavLink>
+				<NavLink to={"/myqtns"}>MyQtns</NavLink>
+				<NavLink to={"/logout"}>Logout</NavLink>
+			</div>):(
+			<div>
 			<NavLink to={"/"}>MiniOverFlow</NavLink>
-			<NavLink to={"/register"}>Register</NavLink>
-			<NavLink to={"/login"}>Login</NavLink>
-			<NavLink to={"/post"}>Post</NavLink>
-			<NavLink to={"/all"}>Qtns</NavLink>
-			<NavLink to={"/myqtns"}>MyQtns</NavLink>
+			</div>
+		)}
 		</ul>
 		</div>
 	)

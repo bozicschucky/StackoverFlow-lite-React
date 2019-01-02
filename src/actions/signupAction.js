@@ -1,11 +1,12 @@
 import { SIGNUP } from "./types";
-import toastr from 'toastr';
+import toastr from "toastr";
 toastr.options = {
-  positionClass: "toast-top-center",
-  preventDuplicates: true
+	positionClass: "toast-top-center",
+	preventDuplicates: true
 };
 
-const SIGN_UP_URL = "https://stackoverflowlite2.herokuapp.com/api/v2/auth/register";
+const SIGN_UP_URL =
+	"https://stackoverflowlite2.herokuapp.com/api/v2/auth/register";
 
 const SignUpAction = data => dispatch =>
 	fetch(SIGN_UP_URL, {
@@ -16,12 +17,15 @@ const SignUpAction = data => dispatch =>
 		}
 	})
 		.then(res => res.json())
-		.then(res =>{
+		.then(res => {
 			dispatch({
 				type: SIGNUP,
 				payload: res
-			})
-			toastr.warning(res.message)
-		})
+			});
+			toastr.warning(res.message);
+			setTimeout(() => {
+				window.location.replace("/login");
+			}, 4000);
+		});
 
 export default SignUpAction;

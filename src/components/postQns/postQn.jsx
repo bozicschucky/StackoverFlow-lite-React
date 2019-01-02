@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import postQnAction from "../../actions/postQnAction";
-import { Link } from "react-router-dom";
 
 export class PostQn extends Component {
 	state = {
